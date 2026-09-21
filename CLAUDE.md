@@ -36,6 +36,52 @@ which enforces the doc-sync rule below in code — it fails if a plugin in the m
 missing `SKILL.md`/`plugin.json`, or has no row in the skill index, or vice versa. Both steps
 read `.claude-plugin/marketplace.json` at run time, so adding a skill needs no workflow edit.
 
+## Commit messages
+
+This repo follows [Conventional Commits v1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+- **type** — `feat` (new capability, e.g. a new skill or command) or `fix` (corrects
+  behavior). Also used here: `docs` (README/CLAUDE.md/CONTEXT.md/ADR-only changes), `chore`
+  (repo maintenance — renames, cleanup, dependency/version bumps), `ci` (workflow or CI
+  script changes), `refactor` (restructuring with no behavior change, e.g. the
+  done-n-dusted → done-and-dusted flattening).
+- **scope** — the plugin folder the change is about, in parentheses right after the type:
+  `feat(security-audit): ...`, `fix(done-and-dusted): ...`. Omit it for changes that aren't
+  scoped to one skill (marketplace manifest, CI, root docs).
+- **description** — short, imperative, lowercase, no trailing period.
+- **body** — the *why*, one blank line after the description. Optional, but expected for
+  anything non-obvious (matches the domain-modeling discipline this repo already uses).
+- **breaking change** — a change that breaks an already-installed plugin (renaming a plugin,
+  removing a `SKILL.md` frontmatter field consumers rely on, changing `docsPath` semantics).
+  Mark it either way, not both: `!` right before the colon (`feat(next-step)!: ...`), or a
+  `BREAKING CHANGE: <description>` footer. `BREAKING CHANGE` is the one footer token that
+  stays uppercase; every other footer token uses hyphens (`Refs-issue`, `Acked-by`).
+
+Examples from this repo's own history, in the target shape:
+
+```
+feat(4d-analyzer): add rewrite step for system-prompt inputs
+
+fix(done-and-dusted): normalize backslashes before comparing docsPath
+
+docs: clarify private-repo access in README
+
+ci: add plugin/marketplace validation workflow
+
+refactor!: rename done-n-dusted to done-and-dusted, flatten to standard plugin layout
+
+BREAKING CHANGE: /plugin install done-n-dusted@personal-skills no longer resolves;
+use done-and-dusted instead.
+```
+
 ## Skill index
 
 | Skill | Status | Purpose | Last updated |
