@@ -54,6 +54,25 @@ it's the whole point of the tracking structure; a stale table is worse than none
 4. Add a row to the **Skill index** above, status `idea` or `draft` depending on how baked it is.
 5. Flesh out `references/`, `assets/`, `scripts/` only as the skill actually needs them —
    keep `SKILL.md` itself thin, since it loads on every invocation and reference files don't.
+6. Update every doc the new skill actually affects, in the same change that adds it — a skill
+   isn't done until these are in sync, not as a follow-up:
+   - **`CLAUDE.md`** — the skill index (step 4) and, if the skill introduces a structural
+     pattern worth reusing (a new gate/log discipline, a new folder convention), the
+     **Conventions** section below.
+   - **`CONTEXT.md`** — add or revise a term if the skill introduces one, or if it uses an
+     existing term in a way that doesn't fit its current definition.
+   - **`docs/adr/`** — write a new ADR only if this skill's addition meets the three-part test
+     in the definition-of-done below; most new skills won't need one.
+   - **Root `README.md`** — update only if the skill changes the install/usage story for
+     someone landing on the repo (new one being added rarely does).
+
+   **Definition of done for any change to this repo** — not just adding a skill: if you
+   touched something a doc describes (renamed a skill, changed its status, changed the
+   plugin/marketplace shape, resolved a glossary term differently), update that doc in the
+   same change. A structural decision earns an ADR only when it's hard to reverse, would
+   surprise a future reader without context, and was a real trade-off between genuine
+   alternatives — skip the ADR otherwise. Never leave `CLAUDE.md`, `CONTEXT.md`, or the skill
+   index describing a repo state that no longer exists.
 
 ## Conventions carried over from the existing skills
 
