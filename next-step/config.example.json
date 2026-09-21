@@ -1,0 +1,6 @@
+{
+  "_comment": "Claude Code only. Copy to config.json, or let the first run create it. Never point notesPath inside a code repository.",
+  "notesPath": "C:/Users/you/life-roadmap",
+  "_journalPath": "Optional. Folder of work-journal entries (e.g. daily-chore) to read during check-ins. Leave empty to disable.",
+  "journalPath": ""
+}

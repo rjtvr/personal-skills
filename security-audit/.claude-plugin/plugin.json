@@ -1,0 +1,6 @@
+{
+  "name": "security-audit",
+  "description": "Audit a codebase for OWASP Top 10 vulnerabilities, leaked secrets, and CVEs, then rank findings by real risk.",
+  "version": "0.1.0",
+  "author": { "name": "Rajat" }
+}

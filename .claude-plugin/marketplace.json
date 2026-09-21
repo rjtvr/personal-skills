@@ -1,0 +1,51 @@
+{
+  "name": "personal-skills",
+  "owner": {
+    "name": "Rajat"
+  },
+  "description": "Rajat's personal collection of Claude Code skills.",
+  "plugins": [
+    {
+      "name": "4d-analyzer",
+      "source": "./4d-analyzer",
+      "description": "Analyze a prompt, AI conversation, or SKILL.md against Anthropic's AI Fluency 4D framework and produce an improved rewrite.",
+      "version": "0.1.0",
+      "author": { "name": "Rajat" }
+    },
+    {
+      "name": "done-and-dusted",
+      "source": "./done-and-dusted",
+      "description": "Write a work-journal entry for the task just finished, saved outside the repo and organized by date and repository.",
+      "version": "0.1.0",
+      "author": { "name": "Rajat" }
+    },
+    {
+      "name": "next-step",
+      "source": "./next-step",
+      "description": "Interview-driven personal roadmap builder covering career, learning, personal life, and money.",
+      "version": "0.1.0",
+      "author": { "name": "Rajat" }
+    },
+    {
+      "name": "responsive-ui-debug",
+      "source": "./responsive-ui-debug",
+      "description": "Diagnose and fix responsive layout bugs (overflow, broken mobile/desktop layouts) by measuring the rendered page first.",
+      "version": "0.1.0",
+      "author": { "name": "Rajat" }
+    },
+    {
+      "name": "security-audit",
+      "source": "./security-audit",
+      "description": "Audit a codebase for OWASP Top 10 vulnerabilities, leaked secrets, and CVEs, then rank findings by real risk.",
+      "version": "0.1.0",
+      "author": { "name": "Rajat" }
+    },
+    {
+      "name": "ux-audit",
+      "source": "./ux-audit",
+      "description": "Audit UI/UX for accessibility, visual consistency, and usability, producing a severity-ranked report and fix plan.",
+      "version": "0.1.0",
+      "author": { "name": "Rajat" }
+    }
+  ]
+}

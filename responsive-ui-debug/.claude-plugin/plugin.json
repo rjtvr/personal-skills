@@ -1,0 +1,6 @@
+{
+  "name": "responsive-ui-debug",
+  "description": "Diagnose and fix responsive layout bugs (overflow, broken mobile/desktop layouts) by measuring the rendered page first.",
+  "version": "0.1.0",
+  "author": { "name": "Rajat" }
+}

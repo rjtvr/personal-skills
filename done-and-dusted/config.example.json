@@ -1,0 +1,18 @@
+{
+  "_comment": "Copy to config.json and edit. config.json is never packaged, so reinstalling will not overwrite it.",
+  "docsPath": "C:/Users/you/projects",
+  "excludeRepos": [],
+  "timeFormat": "24h",
+
+  "_remoteHostMap": "Only needed with SSH host aliases. Maps the alias in your remote URL to the real forge host so PR and issue links resolve.",
+  "remoteHostMap": {
+    "github-work": "github.com",
+    "github-personal": "github.com"
+  },
+
+  "_accountLabels": "Optional. Tags each entry work/personal by SSH host alias. Omit entirely to skip tagging.",
+  "accountLabels": {
+    "github-work": "work",
+    "github-personal": "personal"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ux-audit",
+  "description": "Audit UI/UX for accessibility, visual consistency, and usability, producing a severity-ranked report and fix plan.",
+  "version": "0.1.0",
+  "author": { "name": "Rajat" }
+}

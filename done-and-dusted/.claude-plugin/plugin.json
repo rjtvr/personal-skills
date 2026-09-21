@@ -1,0 +1,6 @@
+{
+  "name": "done-and-dusted",
+  "description": "Write a work-journal entry for the task just finished, saved outside the repo and organized by date and repository.",
+  "version": "0.1.0",
+  "author": { "name": "Rajat" }
+}

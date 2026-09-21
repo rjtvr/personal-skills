@@ -1,0 +1,6 @@
+{
+  "name": "4d-analyzer",
+  "description": "Analyze a prompt, AI conversation, or SKILL.md against Anthropic's AI Fluency 4D framework and produce an improved rewrite.",
+  "version": "0.1.0",
+  "author": { "name": "Rajat" }
+}
