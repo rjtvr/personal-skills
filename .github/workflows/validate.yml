@@ -1,0 +1,39 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # claude plugin validate runs fully offline (no ANTHROPIC_API_KEY / claude auth login
+      # needed) — it only parses manifests and skill/command frontmatter against the schema.
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code@2.1.248
+
+      - name: Validate marketplace manifest
+        run: claude plugin validate . --strict
+
+      - name: Validate every plugin listed in the marketplace
+        run: |
+          set -euo pipefail
+          for dir in $(jq -r '.plugins[].source' .claude-plugin/marketplace.json); do
+            echo "::group::Validating $dir"
+            claude plugin validate "$dir" --strict
+            echo "::endgroup::"
+          done
+
+      # Enforces the doc-sync rule in CLAUDE.md: every plugin in the marketplace must have
+      # its files on disk and a row in the skill index, and vice versa.
+      - name: Check marketplace / skill-index consistency
+        run: node .github/scripts/check-consistency.mjs

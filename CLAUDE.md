@@ -27,6 +27,15 @@ plugin so the repo can be added as a marketplace:
 /plugin install <skill-name>@personal-skills
 ```
 
+## CI
+
+[`.github/workflows/validate.yml`](./.github/workflows/validate.yml) runs on every push and
+PR: `claude plugin validate --strict` against the marketplace manifest and every plugin it
+lists, plus [`.github/scripts/check-consistency.mjs`](./.github/scripts/check-consistency.mjs),
+which enforces the doc-sync rule below in code — it fails if a plugin in the marketplace is
+missing `SKILL.md`/`plugin.json`, or has no row in the skill index, or vice versa. Both steps
+read `.claude-plugin/marketplace.json` at run time, so adding a skill needs no workflow edit.
+
 ## Skill index
 
 | Skill | Status | Purpose | Last updated |
