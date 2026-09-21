@@ -3,6 +3,10 @@
 Rajat's personal collection of [Claude Code](https://claude.com/claude-code) skills,
 packaged as an installable plugin marketplace.
 
+This repo is **private**. The install command below only works for the repo owner (already
+authenticated via `gh`/git) or an account added as a collaborator — cloning or adding this
+marketplace with no access will fail, not silently skip.
+
 ## Install
 
 ```
