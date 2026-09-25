@@ -11,7 +11,8 @@ packaged as an installable plugin marketplace.
 ```
 
 See the [skill index](./CLAUDE.md#skill-index) for what's available and each skill's
-`SKILL.md` for what it does and when it triggers.
+`SKILL.md` for what it does and when it triggers. Trying one for the first time? See
+[docs/PERMISSIONS.md](./docs/PERMISSIONS.md) for what it'll prompt you to approve.
 
 ## Repo conventions
 

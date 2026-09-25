@@ -1,0 +1,6 @@
+{
+  "name": "openai-api",
+  "description": "Reference for the OpenAI API — model ids, pricing, the Responses API, function calling, streaming, and prompt caching.",
+  "version": "0.1.0",
+  "author": { "name": "Rajat" }
+}

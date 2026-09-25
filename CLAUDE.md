@@ -89,6 +89,7 @@ use done-and-dusted instead.
 | [4d-analyzer](./4d-analyzer/SKILL.md) | stable | Grade a prompt/conversation/SKILL.md against Anthropic's 4D AI Fluency framework and rewrite it | 2026-09-21 |
 | [done-and-dusted](./done-and-dusted/SKILL.md) | stable | Write a work-journal entry for the task just finished | 2026-09-22 |
 | [next-step](./next-step/SKILL.md) | stable | Interview-driven personal roadmap (career, learning, life, money) | 2026-09-21 |
+| [openai-api](./openai-api/SKILL.md) | draft | Reference for the OpenAI API — models, pricing, Responses API, tools, streaming, caching | 2026-09-25 |
 | [responsive-ui-debug](./responsive-ui-debug/SKILL.md) | stable | Measure and fix responsive/overflow layout bugs | 2026-09-21 |
 | [security-audit](./security-audit/SKILL.md) | stable | OWASP-ranked security audit with brief/gate discipline | 2026-09-22 |
 | [ux-audit](./ux-audit/SKILL.md) | stable | Severity-ranked UI/UX audit plus an executable fix plan | 2026-09-07 |
